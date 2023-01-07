@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #343541;
+  background: #000000;
 }
 
 #app {
@@ -50,7 +50,7 @@ body {
 }
 
 .ai {
-  background: #40414F;
+   background: #000000;
 }
 
 .chat {
@@ -113,6 +113,7 @@ body {
 }
 
 form {
+  border-radius: 2vh 2vh 2vh 2vh;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -127,7 +128,7 @@ form {
 textarea {
   width: 100%;
 
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-size: 18px;
 
   padding: 10px;
