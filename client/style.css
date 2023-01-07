@@ -14,7 +14,7 @@ body {
 #app {
   width: 100vw;
   height: 100vh;
-  background: #000000;
+  background: #807d7d;
 
   display: flex;
   flex-direction: column;
