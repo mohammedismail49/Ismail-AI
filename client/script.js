@@ -1,19 +1,6 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 
-
-// Create an <img> element
-var img = document.createElement("img");
-
-// Set the src of the image
-img.src = "https://i.pinimg.com/736x/89/8f/9b/898f9bdfaaad17e37c47859af94ef306.jpg";
-
-// Get the element where you want to add the image
-var element = document.getElementById("my-element");
-
-// Append the image to the element
-element.appendChild(img);
-
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
@@ -64,8 +51,8 @@ function chatStripe(isAi, value, uniqueId) {
             <div class="chat">
                 <div class="profile">
                     <img 
-                      src=${isAi ? img : user} 
-                      alt="${isAi ? 'img' : 'user'}" 
+                      src=${isAi ? bot : user} 
+                      alt="${isAi ? 'bot' : 'user'}" 
                     />
                 </div>
                 <div class="message" id=${uniqueId}>${value}</div>
@@ -99,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://openai-ismail12.onrender.com', {
+    const response = await fetch('https://bhargavi-group-ai.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -114,7 +101,7 @@ const handleSubmit = async (e) => {
 
     if (response.ok) {
         const data = await response.json();
-        const parsedData = data.img.trim() // trims any trailing spaces/'\n' 
+        const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
 
         typeText(messageDiv, parsedData)
     } else {
